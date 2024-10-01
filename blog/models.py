@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 class Category(models.Model):
 
@@ -17,7 +18,8 @@ class Post(models.Model):
 
     title = models.CharField(max_length=255)
 
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
+    # body = models.TextField()
 
     created_on = models.DateTimeField(auto_now_add=True)
 

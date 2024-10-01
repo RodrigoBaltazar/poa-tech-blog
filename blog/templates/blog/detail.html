@@ -25,6 +25,6 @@
 
     </small>
 
-    <p>{{ post.body | linebreaks }}</p>
+    <p>{{ post.body|safe|linebreaks}}</p>
 
 {% endblock page_content %}
